@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+/* TOP */
+.main-bg {
+  position: relative;
+  background-image: url(../img/background/main.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* background-color: #000; */
+  height: 50%;
+  width: 50%;
+  color: #fff;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  background-color: rgba(0,0,0,.3);
+}
+
+.logo-icon {
+  background-color: red;
+  height:3rem;
+  line-height: 3rem;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.navi {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  color: white;
+  padding: 0;
+  /* background-color: blue; */
+}
+
+.nav-list {
+  padding: 3px 10px;
+}
+
+.nav-list > a {
+  display: block;
+  text-decoration: none;
+  /* background-color: red; */
+  color: white;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  /* padding: 3px 10px; */
+} 
+
+/* 共通 */
+
+.btn-icon {
+  /* text-indent: 2.5rem; */
+  border-radius: 25px;
+  background-color: #FF9C00;
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+  padding: 0px 30px;
+}
+
+section {
+  height: 550px;
+  /* text-align: center; */
+}
+
+section h1 {
+  display: block;
+
+}
+
+section h1:after {
+  content: '';
+  width: 10px;
+  height: 15px;
+  background-color: red;
+}
+
+section:nth-child(odd) {
+  color: #fff;
+  background-color: #5B6071;
+}
+
+section:nth-child(odd) h1 {
+  color: #fff;
+  text-align: center;
+}
+
+section:nth-child(odd) h6 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+section:nth-child(even) {
+  background-color: white;
+}
+
+section:nth-child(even) h1 {
+  text-align: center;
+}
+
+section:nth-child(even) h6 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ABOUT ME */
+
+.profBox {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 5px 15px;
+} 
+
+.profBox p {
+  margin: 10px 0 10px 0;
+}
+
+.profBox > p {
+  margin: 5px 0 10px 0;
+}
+
+.imgBox {
+  width: 22rem;
+  height: 22rem;
+  text-align: left;
+  padding: 0px 15px;
+}
+
+.myImg {
+  box-shadow: 0 0 8px #5B6071;
+  border-radius: 50%;
+  background-image: url(../img/background/myImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profLine {
+  display :block;
+  height: 2px;
+  width: 100%;
+  background-color:#5B6071;
+  border-radius: 1px;
+}
+
+
+/* SERVICE */
+
+.serviceBox {
+  width: 100%;
+  height: 20rem;
+} 
+
+.service-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.round-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+
+.text-side {
+  height: 60%;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.round-box {
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 20px 0;
+  box-shadow: 0 0 8px #fff;
+}
+
+.design {
+  background-image: url(../img/service/design.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
+}
+
+.coding {
+  background-image: url(../img/service/coding.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
+}
+
+.wordpress {
+  background-image: url(../img/service/wordpress.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 50% left 50%;
+}
+
+/* WORKS */
+
+.contents-side {
+  height: 67%;
+}
+
+.info-side {
+  height: 33%;
+  text-align: center;
+  margin: 10px 20px;
+}
+
+.workBox {
+  width: 100%;
+  height: 20rem;
+  box-shadow: 0 0 8px #5B6071;
+  border-radius: 25px;
+  /* background-color: #000; */
+} 
+
+/* CONTACT */
+
+.form-group label {
+  text-align: left;
+  color: #fff;
+}
+
+.form-margin {
+  margin-top: 1rem;
+}
+
+
+/* フッター */
+
+footer {
+  padding: 1rem 0;
+}
