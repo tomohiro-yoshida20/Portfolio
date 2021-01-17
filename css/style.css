@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-size: 1rem;
+  font-family: futura-pt, "Hiragino Sans", Meiryo, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
+  /* line-height: 1.3; */
+}
+
 /* TOP */
 .main-bg {
   position: relative;
@@ -17,12 +26,64 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  /* background-color: #000; */
   height: 50%;
-  width: 50%;
+  width: 100%;
+  /* background-color: blue; */
   color: #fff;
   transform: translate(-50%,-50%);
   text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.6);
+  transition: top .3s .4s;
+  font-size: 1.3rem;
+}
+
+.modal.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* transition: top .3s .4s; */
+}
+
+.modal-navi {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  color: white;
+  width: 300px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list:nth-child(1) {
+  transition: all .3 .8;
+  /* position: fixed; */
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
 }
 
 header {
@@ -31,57 +92,94 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 3rem;
-  background-color: rgba(0,0,0,.3);
+  height: 4rem;
+  background-color: rgba(0,0,0,.6);
+  transition: top .3s;
+}
+
+header.active {
+  position: fixed;
+  top: -4rem;
+  left: 0;
+  right: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: block;
+  width: 50%;
+  cursor: pointer;
 }
 
 .logo-icon {
-  background-color: red;
-  height:3rem;
-  line-height: 3rem;
-  font-size: 2rem;
+  height: 4rem;
+  font-size: 1.7rem;
   color: white;
   text-align: center;
 }
 
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
 .navi {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   list-style-type: none;
   color: white;
   padding: 0;
-  /* background-color: blue; */
+  margin: 0;
 }
 
 .nav-list {
-  padding: 3px 10px;
+  padding: 0px 10px;
 }
 
 .nav-list > a {
   display: block;
   text-decoration: none;
-  /* background-color: red; */
   color: white;
-  font-size: 1.3rem;
-  line-height: 2.5rem;
-  /* padding: 3px 10px; */
 } 
 
-/* 共通 */
+.nav-list > a:hover {
+  color: #000;
+  transition: all .3s;
+} 
 
-.btn-icon {
-  /* text-indent: 2.5rem; */
-  border-radius: 25px;
-  background-color: #FF9C00;
-  font-size: 1.3rem;
-  color: white;
-  text-align: center;
-  padding: 0px 30px;
+.hamberger {
+  display: none;
 }
 
+/* 共通 */
+.subTitle {
+  font-weight: bold;
+}
+
+.btn-icon {
+  border-radius: 25px;
+  background-color: #FF9C00;
+  text-align: center;
+  padding: 10px 15px;
+  border: none;
+  color: #fff;
+}
+
+.btn-icon:hover {
+  color: #000;
+  transition: all .3s;
+} 
+
 section {
-  height: 550px;
-  /* text-align: center; */
+  /* height: 550px; */
+  height: auto;
+  padding: 80px 0;
 }
 
 section h1 {
@@ -131,12 +229,17 @@ section:nth-child(even) h6 {
   justify-content: center;
 }
 
-
 /* ABOUT ME */
+
+.image {
+  width: 100%;
+  height: auto;
+  transform: scale(.9);
+}
 
 .profBox {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   text-align: left;
   padding: 5px 15px;
 } 
@@ -149,21 +252,6 @@ section:nth-child(even) h6 {
   margin: 5px 0 10px 0;
 }
 
-.imgBox {
-  width: 22rem;
-  height: 22rem;
-  text-align: left;
-  padding: 0px 15px;
-}
-
-.myImg {
-  box-shadow: 0 0 8px #5B6071;
-  border-radius: 50%;
-  background-image: url(../img/background/myImg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .profLine {
   display :block;
   height: 2px;
@@ -171,7 +259,6 @@ section:nth-child(even) h6 {
   background-color:#5B6071;
   border-radius: 1px;
 }
-
 
 /* SERVICE */
 
@@ -231,18 +318,19 @@ section:nth-child(even) h6 {
 /* WORKS */
 
 .contents-side {
-  height: 67%;
+  height: 70%;
 }
 
 .info-side {
-  height: 33%;
+  height: 30%;
   text-align: center;
   margin: 10px 20px;
 }
 
 .workBox {
   width: 100%;
-  height: 20rem;
+  height: 24rem;
+  margin: 20px 0;
   box-shadow: 0 0 8px #5B6071;
   border-radius: 25px;
   /* background-color: #000; */
@@ -258,7 +346,6 @@ section:nth-child(even) h6 {
 .form-margin {
   margin-top: 1rem;
 }
-
 
 /* フッター */
 

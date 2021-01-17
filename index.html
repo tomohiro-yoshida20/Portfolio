@@ -1,59 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/service/wordpress.svg">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!-- style.css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_768.css">
 
+    <!-- cdn -->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
+    <!-- title -->
     <title>My Portforio</title>
   </head>
   <body>
     <div class="main-bg">
-      <header>
-        <div class="container">
-          <div class="row">        
-            <div class="col-md-2 logo-icon">
-              LOGO
-            </div>
-            <div class="col-md-6 offset-4">
-              <ul class="navi">
-                <li class="nav-list"><a href="" class="btn-hov">ABOUT</a></li>
-                <li class="nav-list"><a href="" class="btn-hov">WORKS</a></li>
-                <li class="nav-list"><a href="" class="btn-hov">SERVICE</a></li>
-                <li class="nav-list">
-                  <a href="" class="btn btn-icon">
-                    <i class="fas fa-envelope"></i>
-                    <span>CONTACT</span>
-                  </a>
-                </li>
-              </ul>
+      <header id="header" class="">   
+        <div class="header-top">
+          <div class="logo-icon">
+            <a href="#top">
+              <img src="img/background/logo.svg" class="logo" alt="ロゴ">
+            </a>
+          </div>
+          <div class="header-menu">
+            <ul class="navi">
+              <li class="nav-list"><a href="#about" class="btn-hov">ABOUT</a></li>
+              <li class="nav-list"><a href="#works" class="btn-hov">WORKS</a></li>
+              <li class="nav-list"><a href="#service" class="btn-hov">SERVICE</a></li>
+              <li class="nav-list">
+                <a href="#contact" class="btn-icon">
+                  <i class="fas fa-envelope"></i>
+                  <span>CONTACT</span>
+                </a>
+              </li>
+            </ul>
+            <div class="hamberger">
+              <div class="btn-trigger" id="btn01">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
-        </div>
+        </div>   
       </header>
       <div class="title">
-        <h1>Tomohiro Yoshida 's<br>
-          Portforio Site</h1>
-        <h3>- Web Design & Engineering -</h3>
+        <div class="center">
+          <h1 class="" id="title"></h1>
+          <h3 class="" id="title-sub"></h3>
+        </div>
+      </div>
+      <div class="modal" id="modal">
+        <ul class="modal-navi">
+          <li class="nav-list"><a href="#about" class="btn-hov">ABOUT</a></li>
+          <li class="nav-list"><a href="#works" class="btn-hov">WORKS</a></li>
+          <li class="nav-list"><a href="#service" class="btn-hov">SERVICE</a></li>
+          <li class="nav-list">
+            <a href="#contact" class="btn-icon">
+              <i class="fas fa-envelope"></i>
+              <span>CONTACT</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <section class="middle about">
-        <div class="container">
-          <h1>ABOUT ME</h1>
-          <h6>-自己紹介-</h6>
-          <div class="row">
-            <div class="offset-2 col-md-4">
-              <div class="imgBox myImg"></div>
-            </div>
-            <div class="col-md-4">
-              <div class="profBox">
+    <section class="middle about" id="about">
+      <div class="container">
+        <h1 class="subTitle">ABOUT ME</h1>
+        <h6>-自己紹介-</h6>
+        <div class="row">
+          <div class="offset-md-1 col-md-5">
+            <img src="img/background/Image.jpg" class="image" alt="">
+          </div>
+          <div class="col-md-5">
+            <div class="profBox">
+              <div class="">
                 <p>長崎生まれ長崎育ち</p>
                 <p>大学を卒業後、自治体の基幹システムサービスを提供する<br>
                   IT企業にてバックエンドを経験。<br>
@@ -66,143 +95,141 @@
                 <span class="profLine"></span>
                 <p>使用可能ツール等<br>
                   SCSS / WP / XD / Ai / Ps</p>
-                  <span class="profLine"></span>
+                <span class="profLine"></span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="middle service">
-        <div class="container">
-          <h1>SERVICE</h1>
-          <h6>-サービス-</h6>
-          <div class="row">
-            <div class="col-md-4">
-              
-              <div class="serviceBox service-flex">
-                <div class="round-side">
-                  <div class="round-box design"></div>
-                </div>
-                <div class="text-side">
-                  <h5>WEBデザイン</h5>
-                  <p>オリジナルのデザインおよびテンプレートを用いたデザインをご提供いたします。お客様のご意向に沿うよう、PhotoShopやXDにて作成したワイヤーフレームを展開し、デザインイメージの擦り合わせを行います。
-                  </p>
-                </div>
+      </div>
+    </section>
+    <section class="middle service" id="service">
+      <div class="container">
+        <h1 class="subTitle">SERVICE</h1>
+        <h6>-サービス-</h6>
+        <div class="row">
+          <div class="col-md-4">
+            
+            <div class="serviceBox service-flex">
+              <div class="round-side">
+                <div class="round-box design"></div>
+              </div>
+              <div class="text-side">
+                <h5>WEBデザイン</h5>
+                <p>オリジナルのデザインおよびテンプレートを用いたデザインをご提供いたします。お客様のご意向に沿うよう、PhotoShopやXDにて作成したワイヤーフレームを展開し、デザインイメージの擦り合わせを行います。
+                </p>
               </div>
             </div>
-            <div class="col-md-4">
-              
-              <div class="serviceBox service-flex">
-                <div class="round-side">
-                  <div class="round-box coding"></div>
-                </div>
-                <div class="text-side">
-                  <h5>コーディング</h5>
-                  <p>お客様からお持ちいただいたpsd形式ファイル等のイメージから忠実にWebページを作成いたします。<br>
-                  また、ご希望の操作やページアクションを実現いたします。</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            
+            <div class="serviceBox service-flex">
+              <div class="round-side">
+                <div class="round-box coding"></div>
+              </div>
+              <div class="text-side">
+                <h5>コーディング</h5>
+                <p>お客様からお持ちいただいたpsd形式ファイル等のイメージから忠実にWebページを作成いたします。<br>
+                また、ご希望の操作やページアクションを実現いたします。</p>
               </div>
             </div>
-            <div class="col-md-4">
-              
-              <div class="serviceBox service-flex">
-                <div class="round-side">
-                  <div class="round-box wordpress"></div>
-                </div>
-                <div class="text-side">
-                  <h5>WordPress</h5>
-                  <p>WordPressの導入、運用のサービスをご提供いたします。導入後、操作上ご不明な点がございましたら、お問い合わせフォームよりお気軽にご連絡ください。</p>
-                </div>
+          </div>
+          <div class="col-md-4">
+            
+            <div class="serviceBox service-flex">
+              <div class="round-side">
+                <div class="round-box wordpress"></div>
+              </div>
+              <div class="text-side">
+                <h5>WordPress</h5>
+                <p>WordPressの導入、運用のサービスをご提供いたします。導入後、操作上ご不明な点がございましたら、お問い合わせフォームよりお気軽にご連絡ください。</p>
               </div>
             </div>
           </div>
         </div>
-        
-      </section>
-      <section class="middle works">
-        <div class="container">
-          <h1>WORKS</h1>
-          <h6>-制作実績-</h6>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="workBox service-flex">
-                <div class="contents-side">
-                </div>
-                <div class="info-side">
-                  <h5>ポートフォリオサイト</h5>
-                  <p>ポートフォリオサイトです。
-                    製作日数：3日
-                  </p>
-                </div>
+      </div>
+    </section>
+    <section class="middle works" id="works">
+      <div class="container">
+        <h1 class="subTitle">WORKS</h1>
+        <h6>-制作実績-</h6>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="workBox service-flex">
+              <div class="contents-side">
+              </div>
+              <div class="info-side">
+                <h5>ポートフォリオサイト</h5>
+                <p>ポートフォリオサイトです。
+                  製作日数：4日
+                </p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="workBox service-flex">
-                <div class="contents-side">
-                </div>
-                <div class="info-side">
-                  <h5>動物病院</h5>
-                  <p>職業訓練校の課題制作に作成しました。
-                    グループ制作したものをアレンジ・改修を行いました。
-                    制作日数：10日
-                  </p>
-                </div>
+          </div>
+          <div class="col-md-6  col-lg-4">
+            <div class="workBox service-flex">
+              <div class="contents-side">
+              </div>
+              <div class="info-side">
+                <h5>動物病院</h5>
+                <p>職業訓練校の課題制作に作成しました。
+                  グループ制作したものをアレンジ・改修を行いました。
+                  制作日数：10日
+                </p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="workBox service-flex">
-                <div class="contents-side">
-                </div>
-                <div class="info-side">
-                  <h5>ECサイト</h5>
-                  <p>ECサイトです。
-                    制作日数：4日
-                  </p>
-                </div>
+          </div>
+          <div class="col-md-6  col-lg-4">
+            <div class="workBox service-flex">
+              <div class="contents-side">
+              </div>
+              <div class="info-side">
+                <h5>ECサイト</h5>
+                <p>ECサイトです。
+                  制作日数：4日
+                </p>
               </div>
             </div>
           </div>
         </div>
-        
-      </section>
-      <section class="middle contact">
-        <div class="container">
-          <h1>CONTACT</h1>
-          <h6>-お問い合わせ-</h6>
-          <div class="row">
-            <div class="offset-3 col-md-6">
-              <form>
-                <div class="form-group form-margin row">
-                  <div class="col-md-6">
-                    <label>姓</label>
-                    <input type="text" class="form-control" placeholder="山田">
-                  </div>
-                  <div class="col-md-6">
-                    <label>名</label>
-                    <input type="text" class="form-control" placeholder="太郎">
-                  </div>
+      </div>
+    </section>
+    <section class="middle contact" id="contact">
+      <div class="container">
+        <h1 class="subTitle">CONTACT</h1>
+        <h6>-お問い合わせ-</h6>
+        <div class="row">
+          <div class="offset-md-3 col-md-6">
+            <form>
+              <div class="form-group form-margin row">
+                <div class="col-md-6">
+                  <label for="lastName">姓</label>
+                  <input type="text" class="form-control" placeholder="山田" id="lastName">
                 </div>
-                <div class="form-group form-margin">
-                  <label for="exampleFormControlInput1">メールアドレス</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <div class="col-md-6 form-margin-768">
+                  <label for="firstName">名</label>
+                  <input type="text" class="form-control" placeholder="太郎" id="firstName">
                 </div>
-                <div class="form-group form-margin">
-                  <label for="exampleFormControlTextarea1">お問い合わせ内容</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-icon form-margin">送信する</button>
-              </form>
-            </div>
-          </div>          
-        </div>
-      </section>
-      
-      <footer class="middle">
-        <p>
-          <small>
-            &copy;2020 TOMOHIRO YOSHIDA
-          </small>
-        </p>
+              </div>
+              <div class="form-group form-margin">
+                <label for="exampleFormControlInput1">メールアドレス</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group form-margin">
+                <label for="exampleFormControlTextarea1">お問い合わせ内容</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="こちらへお問い合わせ内容をお書きください。"></textarea>
+              </div>
+              <button type="submit" class="btn-icon form-margin">送信する</button>
+            </form>
+          </div>
+        </div>          
+      </div>
+    </section>
+    <footer class="middle">
+      <p>
+        <small>
+          &copy;2020 TOMOHIRO YOSHIDA
+        </small>
+      </p>
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -215,5 +242,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
+
+    <!-- main.js -->
+    <script src="js/main.js"></script>
   </body>
 </html>
