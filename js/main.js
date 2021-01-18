@@ -36,7 +36,7 @@
   }
 
   // メインタイトル文字
-  const titleLtter = "Tomohiro Yoshida 's" + "\n" + "Portforio Site";
+  const titleLtter = "Tomohiro Yoshida 's" + "\n" + "Portforio";
   // サブタイトル文字
   const subLetter = 'Web Design & Engineering';
 
